@@ -1,15 +1,32 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
-// font-family: 'Roboto', sans-serif;
 
 body {
   background: #fff;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p, a, button, img, ul, li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+
+
+// font-sizing
 // h1 60 Roboto Bold caps white.
 // h2 48 Roboto Bold caps 464646
 // h3 30 Roboto Bold 464646
 // h4 24 Roboto Bold white caps / Roboto light
 // h5 18 Roboto Bold 464646 / Roboto Light b7b7b7
-// h6
+// h6 14 Roboto Light b7b7b7
 // p 16 Roboto Light (and nav) b7b7b7
+
+// backgrounds:
+// header - img
+// work faf9f9
+// customer-feedback faf9f9
+// footer 141414
