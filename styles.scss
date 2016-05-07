@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
-
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700);
 
 body {
   background: #fff;
@@ -14,7 +13,9 @@ h1, h2, h3, h4, h5, h6, p, a, button, img, ul, li {
   text-decoration: none;
 }
 
-
+ul {
+  list-style: none;
+}
 
 // font-sizing
 // h1 60 Roboto Bold caps white.
@@ -25,8 +26,147 @@ h1, h2, h3, h4, h5, h6, p, a, button, img, ul, li {
 // h6 14 Roboto Light b7b7b7
 // p 16 Roboto Light (and nav) b7b7b7
 
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+}
+
+h6, p {
+  font-weight: 300;
+  color: #b7b7b7;
+}
+
+h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #464646;
+}
+
+h3 {
+  font-size: 30px;
+  color: #464646;
+}
+
+h4 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+h5 {
+  font-size: 18px;
+  color: #464646;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+p {
+  font-size: 16px;
+}
+
+button {
+  font-family: inherit;
+  font-size: 16px;
+  color: #fff;
+  width: 163px;
+  height: 56px;
+  border-radius: 3px;
+  border: none ;
+  background-color: #e92121;
+  cursor: pointer;
+}
+
 // backgrounds:
 // header - img
 // work faf9f9
 // customer-feedback faf9f9
 // footer 141414
+
+#header {
+  background-image: url(/images/header-background.jpg);
+  width: 100%;
+  padding-bottom: 216px;
+  .header {
+    h4 {
+      padding-top: 33px;
+      display: inline-block;
+      &:nth-of-type(2) {
+        display: block;
+        font-weight: 100;
+        text-transform: none;
+        padding-top: 242px;
+      }
+    }
+    ul {
+      display: inline-block;
+      margin-left: 330px;
+    }
+    li {
+      display: inline-block;
+      margin: 0 18px;
+    }
+    a {
+      color: #fff;
+    }
+    h1 {
+      padding: 22px 0;
+      max-width: 570px;
+    }
+    .decoration-btn {
+        border: 2px solid #fff;
+        background: none;
+        margin-left: 20px;
+    }
+  }
+}
+
+#page-content {
+  width: 100%;
+}
+
+.header, #history, #process, .work, #about, .customer-feedback, #news, .footer {
+  max-width: 980px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#history {
+}
+
+#process {
+}
+
+#work {
+  background-color: #faf9f9;
+  .work {
+
+  }
+}
+
+#about {
+}
+
+#customer-feedback {
+  background-color: #faf9f9;
+  .customer-feedback {
+
+  }
+}
+
+#news {
+}
+
+#footer {
+  background-color: #141414;
+  .footer {
+
+  }
+}
