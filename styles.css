@@ -21,7 +21,7 @@ h6, p {
   color: #b7b7b7; }
 
 h1 {
-  font-size: 60px;
+  font-size: 58px;
   text-transform: uppercase;
   color: #fff;
   line-height: 1; }
@@ -48,7 +48,7 @@ h6 {
   font-size: 14px; }
 
 p {
-  font-size: 16px; }
+  font-size: 17px; }
 
 button {
   font-family: inherit;
@@ -65,6 +65,8 @@ button {
   background-image: url(/images/header-background.jpg);
   width: 100%;
   padding-bottom: 216px; }
+  #header .header h4, #header .header h1, #header .header button, #header .header .decoration-btn {
+    margin-left: 20px; }
   #header .header h4 {
     padding-top: 33px;
     display: inline-block; }
@@ -75,7 +77,7 @@ button {
       padding-top: 242px; }
   #header .header ul {
     display: inline-block;
-    margin-left: 330px; }
+    margin-left: 317px; }
   #header .header li {
     display: inline-block;
     margin: 0 18px; }
@@ -97,8 +99,87 @@ button {
   width: 90%;
   margin: 0 auto; }
 
+#history .history {
+  padding: 80px 0; }
+  #history .history h2 {
+    max-width: 300px;
+    line-height: 1.25;
+    display: inline-block;
+    width: 45%;
+    margin: 0 171px 0 15px;
+    vertical-align: middle; }
+  #history .history .history-paragraph {
+    display: inline-block;
+    width: 49%;
+    vertical-align: middle; }
+    #history .history .history-paragraph p {
+      margin: 10px 0;
+      line-height: 1.875; }
+
+.span {
+  width: 100%;
+  height: 1px;
+  background-color: #f1f1f1; }
+
+#process {
+  padding: 100px 0;
+  background-image: url(/images/zigzag.png);
+  background-repeat: no-repeat;
+  background-position: center 159px; }
+  #process .process-heading {
+    text-align: center; }
+    #process .process-heading h3 {
+      padding-bottom: 53px; }
+    #process .process-heading h5 {
+      font-weight: 300;
+      color: #b7b7b7;
+      padding-top: 5px; }
+  #process ul {
+    max-width: 980px;
+    padding-top: 124px; }
+  #process li {
+    width: 33%;
+    display: inline-block;
+    max-width: 250px;
+    padding-right: 69px;
+    padding-bottom: 74px; }
+    #process li.store {
+      background-image: url(/images/store-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li.decoration {
+      background-image: url(/images/decoration-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li.payment {
+      background-image: url(/images/payment-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li.calendar {
+      background-image: url(/images/calendar-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li.thumbs-up {
+      background-image: url(/images/thumbs-up-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li.heart {
+      background-image: url(/images/heart-icon.png);
+      background-repeat: no-repeat;
+      background-position: top left; }
+    #process li h5 {
+      padding-top: 90px; }
+    #process li p {
+      padding-top: 30px; }
+
 #work {
-  background-color: #faf9f9; }
+  background-color: #faf9f9;
+  padding: 110px 0; }
+  #work .work img, #work .work h3, #work .work h5 {
+    display: inline-block; }
+  #work .work h5 {
+    max-width: 400px;
+    width: 50%; }
 
 #customer-feedback {
   background-color: #faf9f9; }
