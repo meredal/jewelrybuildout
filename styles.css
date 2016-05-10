@@ -158,7 +158,8 @@ button {
     #process li.calendar {
       background-image: url(/images/calendar-icon.png);
       background-repeat: no-repeat;
-      background-position: top left; }
+      background-position: top left;
+      vertical-align: top; }
     #process li.thumbs-up {
       background-image: url(/images/thumbs-up-icon.png);
       background-repeat: no-repeat;
@@ -166,7 +167,8 @@ button {
     #process li.heart {
       background-image: url(/images/heart-icon.png);
       background-repeat: no-repeat;
-      background-position: top left; }
+      background-position: top left;
+      vertical-align: top; }
     #process li h5 {
       padding-top: 90px; }
     #process li p {
@@ -175,11 +177,64 @@ button {
 #work {
   background-color: #faf9f9;
   padding: 110px 0; }
-  #work .work img, #work .work h3, #work .work h5 {
-    display: inline-block; }
-  #work .work h5 {
-    max-width: 400px;
+  #work .work img, #work .work .work-text {
+    display: inline-block;
+    vertical-align: middle; }
+  #work .work .work-text {
+    width: 50%;
+    margin-left: 75px;
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: left 62px; }
+    #work .work .work-text h5 {
+      max-width: 400px;
+      color: #b7b7b7;
+      font-weight: 300;
+      margin-top: 64px; }
+    #work .work .work-text button {
+      margin-top: 40px; }
+
+#about {
+  padding: 100px 0; }
+  #about p {
+    display: inline-block;
+    max-width: 425px;
     width: 50%; }
+    #about p:nth-of-type(1) {
+      margin-right: 88px; }
+  #about .why {
+    padding-bottom: 100px; }
+    #about .why h2, #about .why ul {
+      display: inline-block;
+      vertical-align: middle; }
+    #about .why h2 {
+      max-width: 180px;
+      margin-right: 219px; }
+    #about .why ul {
+      max-width: 550px; }
+    #about .why li {
+      max-width: 223px;
+      display: inline-block; }
+      #about .why li.handmade, #about .why li.trust {
+        margin-left: 85px; }
+      #about .why li.uniqueness, #about .why li.trust {
+        margin-top: 72px; }
+      #about .why li.trust {
+        vertical-align: top; }
+      #about .why li p {
+        margin-top: 16px; }
+  #about .our-jewelry {
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: 512px 460px; }
+    #about .our-jewelry img {
+      display: block; }
+    #about .our-jewelry h2 {
+      display: inline-block;
+      position: relative;
+      bottom: 181px;
+      left: 514px;
+      max-width: 233px; }
 
 #customer-feedback {
   background-color: #faf9f9; }

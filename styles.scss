@@ -215,6 +215,7 @@ button {
       background-image: url(/images/calendar-icon.png);
       background-repeat: no-repeat;
       background-position: top left;
+      vertical-align: top;
     }
     &.thumbs-up {
       background-image: url(/images/thumbs-up-icon.png);
@@ -225,6 +226,7 @@ button {
       background-image: url(/images/heart-icon.png);
       background-repeat: no-repeat;
       background-position: top left;
+      vertical-align: top;
     }
     h5 {
       padding-top: 90px;
@@ -239,17 +241,86 @@ button {
   background-color: #faf9f9;
   padding: 110px 0;
   .work {
-    img, h3, h5 {
+    img, .work-text {
       display: inline-block;
+      vertical-align: middle;
     }
-    h5 {
-      max-width: 400px;
+    .work-text {
       width: 50%;
+      margin-left: 75px;
+      background-image: url(/images/zigzag.png);
+      background-repeat: no-repeat;
+      background-position: left 62px;
+      h5 {
+        max-width: 400px;
+        color: #b7b7b7;
+        font-weight: 300;
+        margin-top: 64px;
+      }
+      button {
+        margin-top: 40px;
+      }
     }
   }
 }
 
 #about {
+  padding: 100px 0;
+  p {
+    display: inline-block;
+    max-width: 425px;
+    width: 50%;
+    &:nth-of-type(1) {
+      margin-right: 88px;
+    }
+  }
+  .why {
+    padding-bottom: 100px;
+    h2, ul {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    h2 {
+      max-width: 180px;
+      margin-right: 219px;
+    }
+    ul {
+      max-width: 550px;
+    }
+    li {
+      max-width: 223px;
+      display: inline-block;
+      &.handmade, &.trust {
+        margin-left: 85px;
+      }
+      &.uniqueness, &.trust {
+        margin-top: 72px;
+      }
+      &.trust {
+        vertical-align: top;
+      }
+      p {
+        margin-top: 16px
+      }
+    }
+  }
+  .our-jewelry {
+    // padding-bottom: 54px;
+    // extra padding from the h2 element... not sure how to get rid of it. if i make it inline, it will show up correctly, but then i can't set the width of the h2 anymore. and i have no idea if display flex is right.
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: 512px 460px;
+    img {
+      display: block;
+    }
+    h2  {
+      display: inline-block;
+      position: relative;
+      bottom: 181px;
+      left: 514px;
+      max-width: 233px;
+    }
+  }
 }
 
 #customer-feedback {
