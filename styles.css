@@ -94,7 +94,7 @@ button {
 #page-content {
   width: 100%; }
 
-.header, #history, #process, .work, #about, .customer-feedback, #news, .footer {
+.header, #history, #process, .work, #about, .customer-feedback, #news, .footer-content {
   max-width: 980px;
   width: 90%;
   margin: 0 auto; }
@@ -122,12 +122,12 @@ button {
   background-color: #f1f1f1; }
 
 #process {
-  padding: 100px 0;
-  background-image: url(/images/zigzag.png);
-  background-repeat: no-repeat;
-  background-position: center 159px; }
+  padding: 100px 0; }
   #process .process-heading {
-    text-align: center; }
+    text-align: center;
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: center; }
     #process .process-heading h3 {
       padding-bottom: 53px; }
     #process .process-heading h5 {
@@ -143,36 +143,20 @@ button {
     max-width: 250px;
     padding-right: 69px;
     padding-bottom: 74px; }
-    #process li.store {
+    #process li.store, #process li.decoration, #process li.payment, #process li.thumbs-up {
       background-image: url(/images/store-icon.png);
       background-repeat: no-repeat;
       background-position: top left; }
-    #process li.decoration {
-      background-image: url(/images/decoration-icon.png);
-      background-repeat: no-repeat;
-      background-position: top left; }
-    #process li.payment {
-      background-image: url(/images/payment-icon.png);
-      background-repeat: no-repeat;
-      background-position: top left; }
-    #process li.calendar {
+    #process li.calendar, #process li.heart {
       background-image: url(/images/calendar-icon.png);
-      background-repeat: no-repeat;
-      background-position: top left;
-      vertical-align: top; }
-    #process li.thumbs-up {
-      background-image: url(/images/thumbs-up-icon.png);
-      background-repeat: no-repeat;
-      background-position: top left; }
-    #process li.heart {
-      background-image: url(/images/heart-icon.png);
       background-repeat: no-repeat;
       background-position: top left;
       vertical-align: top; }
     #process li h5 {
       padding-top: 90px; }
     #process li p {
-      padding-top: 30px; }
+      padding-top: 30px;
+      line-height: 1.5; }
 
 #work {
   background-color: #faf9f9;
@@ -190,17 +174,19 @@ button {
       max-width: 400px;
       color: #b7b7b7;
       font-weight: 300;
-      margin-top: 64px; }
+      margin-top: 64px;
+      line-height: 1.666666666; }
     #work .work .work-text button {
       margin-top: 40px; }
 
 #about {
   padding: 100px 0; }
-  #about p {
+  #about .about-text {
     display: inline-block;
     max-width: 425px;
-    width: 50%; }
-    #about p:nth-of-type(1) {
+    width: 50%;
+    line-height: 1.875; }
+    #about .about-text:nth-of-type(1) {
       margin-right: 88px; }
   #about .why {
     padding-bottom: 100px; }
@@ -222,8 +208,11 @@ button {
       #about .why li.trust {
         vertical-align: top; }
       #about .why li p {
-        margin-top: 16px; }
+        margin-top: 16px;
+        line-height: 1.5; }
   #about .our-jewelry {
+    position: relative;
+    padding-bottom: 54px;
     background-image: url(/images/zigzag.png);
     background-repeat: no-repeat;
     background-position: 512px 460px; }
@@ -231,15 +220,92 @@ button {
       display: block; }
     #about .our-jewelry h2 {
       display: inline-block;
-      position: relative;
-      bottom: 181px;
-      left: 514px;
+      position: absolute;
+      bottom: 107px;
+      left: 511px;
       max-width: 233px; }
 
 #customer-feedback {
-  background-color: #faf9f9; }
+  background-color: #faf9f9;
+  padding: 73px 0 104px 0; }
+  #customer-feedback .customer-feedback .feedback-heading {
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center; }
+    #customer-feedback .customer-feedback .feedback-heading h3 {
+      padding-bottom: 53px; }
+    #customer-feedback .customer-feedback .feedback-heading h5 {
+      font-weight: 300;
+      color: #b7b7b7;
+      padding-top: 5px; }
+  #customer-feedback .customer-feedback ul {
+    max-width: 980px;
+    padding-top: 124px; }
+  #customer-feedback .customer-feedback li {
+    width: 33%;
+    display: inline-block;
+    max-width: 285px;
+    padding-right: 20px;
+    vertical-align: top;
+    background-image: url(/images/quote-icon.png);
+    background-repeat: no-repeat;
+    background-position: top left; }
+    #customer-feedback .customer-feedback li.paul, #customer-feedback .customer-feedback li.oleg #customer-feedback .customer-feedback li.julia {
+      padding-bottom: 85px; }
+    #customer-feedback .customer-feedback li h5, #customer-feedback .customer-feedback li h6, #customer-feedback .customer-feedback li p {
+      margin-left: 58px; }
+    #customer-feedback .customer-feedback li h6 {
+      padding: 10px 0; }
+
+#news {
+  padding: 100px 0; }
+  #news .news-text {
+    display: inline-block;
+    max-width: 425px;
+    width: 50%;
+    line-height: 1.875; }
+    #news .news-text:nth-of-type(1) {
+      margin-right: 88px; }
+  #news .photoblog {
+    position: relative;
+    padding-bottom: 54px;
+    background-image: url(/images/zigzag.png);
+    background-repeat: no-repeat;
+    background-position: 0 460px; }
+    #news .photoblog img {
+      display: block; }
+    #news .photoblog h2 {
+      display: inline-block;
+      position: absolute;
+      bottom: 105px;
+      left: 0;
+      max-width: 233px; }
 
 #footer {
-  background-color: #141414; }
+  background-color: #141414;
+  padding: 71px 0; }
+  #footer .footer-left {
+    position: absolute; }
+    #footer .footer-left ul {
+      margin-top: 68px;
+      columns: 2; }
+    #footer .footer-left li {
+      margin-bottom: 15px; }
+      #footer .footer-left li a {
+        color: #474747; }
+        #footer .footer-left li a:hover {
+          text-decoration: underline; }
+  #footer .footer-right {
+    position: relative;
+    right: 0;
+    text-align: right; }
+    #footer .footer-right li {
+      display: inline-block;
+      margin-left: 12px; }
+    #footer .footer-right p {
+      color: #353434; }
+      #footer .footer-right p:nth-of-type(1) {
+        margin: 75px 0 5px 0; }
 
 /*# sourceMappingURL=styles.css.map */
