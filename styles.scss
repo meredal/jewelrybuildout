@@ -113,6 +113,7 @@ button {
       margin-left: 317px;
     }
     li {
+      font-size: 14px;
       display: inline-block;
       margin: 0 18px;
     }
@@ -196,16 +197,33 @@ button {
     max-width: 250px;
     padding-right: 69px;
     padding-bottom: 74px;
-    &.store, &.decoration, &.payment, &.thumbs-up {
+    &.store {
       background-image: url(/images/store-icon.png);
+    }
+    &.decoration {
+      background-image: url(/images/decoration-icon.png);
+    }
+    &.payment {
+      background-image: url(/images/payment-icon.png);
+    }
+    &.calendar {
+      background-image: url(/images/calendar-icon.png);
+    }
+    &.thumbs-up {
+      background-image: url(/images/thumbs-up-icon.png);
+    }
+    &.heart {
+      background-image: url(/images/heart-icon.png);
+    }
+    &.store, &.decoration, &.payment, &.thumbs-up, &.calendar, &.heart {
       background-repeat: no-repeat;
       background-position: top left;
     }
     &.calendar, &.heart {
-      background-image: url(/images/calendar-icon.png);
-      background-repeat: no-repeat;
-      background-position: top left;
       vertical-align: top;
+    }
+    &.payment, &.heart {
+      padding-right: 0;
     }
     h5 {
       padding-top: 90px;
@@ -383,6 +401,9 @@ button {
 #footer {
   background-color: #141414;
   padding: 71px 0;
+  .footer-content {
+    padding-bottom: 71px;
+  }
   .footer-left {
     position: absolute;
     ul {
@@ -411,6 +432,417 @@ button {
       color: #353434;
       &:nth-of-type(1) {
         margin: 75px 0 5px 0;
+      }
+    }
+  }
+}
+
+// breaks at 1104, 980, 768, 480 px
+
+@media screen and (max-width: 1104px) {
+  #header .header li {
+    margin: 0px 10px;
+  }
+  #history .history h2 {
+    margin: 0 100px 0 0;
+  }
+  #process, #work, #about, #customer-feedback, #news {
+    padding: 80px 0;
+  }
+  #process {
+    ul {
+      padding-top: 100px;
+    }
+    li {
+      padding-right: 54px;
+    }
+  }
+  #work {
+    .work img, .work .work-text {
+      width: 45%;
+    }
+  }
+  #about {
+    .why h2 {
+      margin-right: 134px;
+    }
+    .about-text {
+      width: 45%;
+      &:nth-of-type(1) {
+        margin-right: 75px;
+      }
+    }
+    .our-jewelry {
+      background-position: 512px 426px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #customer-feedback {
+    .customer-feedback {
+      ul {
+        padding-top: 100px;
+      }
+      li {
+        width: 30%;
+      }
+    }
+  }
+  #news {
+    .photoblog {
+      background-position: 0 426px;
+      img {
+        width: 100%;
+      }
+    }
+    .news-text {
+      width: 45%;
+      &:nth-of-type(1) {
+        margin-right: 75px;
+      }
+    }
+  }
+  #footer {
+    .footer-content {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 979px) {
+  #header {
+    padding-bottom: 190px;
+    .header {
+      ul {
+        margin-left: 152px;
+      }
+    }
+  }
+  #history .history h2 {
+    margin: 0 40px 0 0;
+  }
+  #history .history, #process, #work, #about, #customer-feedback, #news {
+    padding: 50px 0;
+  }
+  #process {
+    ul {
+      padding-top: 80px;
+    }
+    li {
+      width: 30%;
+      padding-right: 20px;
+      vertical-align: top;
+    }
+  }
+  #work .work .work-text {
+    margin-left: 60px;
+  }
+  #about {
+    .why {
+      h2 {
+        margin-right: 33px;
+      }
+      ul {
+        max-width: 460px;
+      }
+      li.handmade, li.trust {
+        margin-left: 0px;
+      }
+    }
+    .about-text {
+      width: 45%;
+      &:nth-of-type(1) {
+        margin-right: 60px;
+      }
+    }
+    .our-jewelry {
+      background-image: none;
+      .jewelry-image {
+        // based on http://j.mp/27UKpEP method
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        &:before {
+          content: "";
+          display: block;
+          padding-top: 25%;  // this equates to a 4:1 width:height ratio
+          width: 100%;
+        }
+        img {
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+      h2 {
+        bottom: auto;
+        left: auto;
+        position: relative;
+        max-width: 100%;
+        margin-top: 10px;
+      }
+    }
+  }
+  #news {
+    .photoblog {
+      background-image: none;
+      .photoblog-image {
+        // based on http://j.mp/27UKpEP method
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        &:before {
+          content: "";
+          display: block;
+          padding-top: 25%;  // this equates to a 4:1 width:height ratio
+          width: 100%;
+        }
+        img {
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+      }
+      h2 {
+        bottom: auto;
+        left: auto;
+        position: relative;
+        max-width: 100%;
+        margin-top: 10px;
+      }
+    }
+    .news-text {
+      width: 45%;
+      &:nth-of-type(1) {
+        margin-right: 60px;
+      }
+    }
+  }
+  #footer {
+    padding: 50px 0;
+    .footer-left ul {
+      margin-top: 40px;
+    }
+    .footer-right p:nth-of-type(1) {
+      margin: 40px 0 5px 0;
+    }
+    .footer-content {
+      padding-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header {
+    padding-bottom: 100px;
+    .header {
+      ul {
+        margin: 15px 0 0 15px;
+      }
+      h4:nth-of-type(2) {
+        padding-top: 120px;
+      }
+      a {
+        padding: 20px 0;
+      }
+    }
+  }
+  #history {
+    .history {
+      h2 {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+        max-width: 100%;
+      }
+      .history-paragraph {
+        width: 100%;
+      }
+    }
+  }
+  #process {
+    ul {
+      padding-top: 80px;
+    }
+    li {
+      width: 40%;
+      padding-bottom: 60px;
+      &.store, &.payment, &.thumbs-up {
+        padding-right: 70px;
+      }
+      &.decoration, &.calendar, &.heart {
+        padding-right: 0;
+      }
+    }
+  }
+  #work {
+    .work {
+      text-align: center;
+      img, .work-text {
+        width: 83%;
+      }
+      .work-text {
+        margin: 0;
+        background-position: center 62px;
+        h3 {
+          padding-top: 10px;
+        }
+        h5 {
+          margin: 64px auto 0 auto;
+        }
+      }
+    }
+  }
+  #about {
+    .why {
+      text-align: center;
+      padding-bottom: 50px;
+      h2 {
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+      ul {
+        width: 80%;
+      }
+      li {
+        max-width: 100%;
+        &.simplicity, &.handmade, &.uniqueness, &.trust {
+          margin: 20px 0;
+        }
+      }
+    }
+    .about-text {
+      max-width: 100%;
+      width: 100%;
+      margin: 10px 0;
+    }
+    .our-jewelry {
+      text-align: center;
+      padding-bottom: 0;
+    }
+  }
+  #customer-feedback {
+    .customer-feedback {
+      ul {
+        padding-top: 80px;
+      }
+      li {
+        width: 45%;
+        &.paul, &.oleg, &.julia, &.serdyuk, &.kulikov, &.andrey {
+          padding-bottom: 60px;
+        }
+        &.paul, &.julia, &.kulikov {
+          padding-right: 20px;
+        }
+        &.oleg, &.serdyuk, &.andrey {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  #news {
+    .photoblog {
+      text-align: center;
+      padding-bottom: 0;
+    }
+    .news-text {
+      max-width: 100%;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  #footer {
+    .footer-content {
+      padding-bottom: 0;
+    }
+    .footer-left, .footer-right {
+      position: static;
+      text-align: center;
+    }
+    .footer-left {
+      ul {
+        margin-top: 10px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+    }
+    .footer-right {
+      ul {
+        margin-top: 20px;
+      }
+      p:nth-of-type(1) {
+        margin: 10px 0 5px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  #header {
+    .header {
+      li {
+        margin: 0 4px;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      button {
+        width: 40%;
+        vertical-align: top;
+      }
+    }
+  }
+  #process {
+    li.store, li.payment, li.thumbs-up {
+      padding-right: 50px;
+    }
+  }
+  #customer-feedback {
+    .customer-feedback {
+      li p {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  h2 {
+    font-size: 40px;
+  }
+  #history .history, #process, #work, #about, #customer-feedback, #news {
+    padding: 20px 0;
+  }
+  #header {
+    .header {
+      h1 {
+        font-size: 40px;
+      }
+      h4:nth-of-type(2) {
+        font-size: 22px;
+      }
+      .header-social {
+        padding-top: 20px;
+      }
+    }
+  }
+  #process {
+    .process-heading {
+      background-image: none;
+      h3 {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  #customer-feedback {
+    .customer-feedback {
+      li h6 {
+        margin-left: 15px;
       }
     }
   }
