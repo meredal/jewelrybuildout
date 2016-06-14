@@ -95,7 +95,7 @@ button {
 #page-content {
   width: 100%; }
 
-.header, #history, #process, .work, #about, .customer-feedback, #news, .footer-content {
+.header, #history, #process, .slide, #about, .customer-feedback, #news, .footer-content {
   max-width: 980px;
   width: 90%;
   margin: 0 auto; }
@@ -172,23 +172,35 @@ button {
 #work {
   background-color: #faf9f9;
   padding: 110px 0; }
-  #work .work img, #work .work .work-text {
-    display: inline-block;
-    vertical-align: middle; }
-  #work .work .work-text {
-    width: 50%;
-    margin-left: 75px;
-    background-image: url(/images/zigzag.png);
-    background-repeat: no-repeat;
-    background-position: left 62px; }
-    #work .work .work-text h5 {
-      max-width: 400px;
-      color: #b7b7b7;
-      font-weight: 300;
-      margin-top: 64px;
-      line-height: 1.666666666; }
-    #work .work .work-text button {
-      margin-top: 40px; }
+  #work .reel {
+    position: relative; }
+    #work .reel .left-arrow, #work .reel .right-arrow {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      margin: 0 50px;
+      padding: 19px 29px; }
+      #work .reel .left-arrow:hover, #work .reel .right-arrow:hover {
+        background-color: white; }
+    #work .reel .right-arrow {
+      right: 0; }
+    #work .reel .slide img, #work .reel .slide .slide-text {
+      display: inline-block;
+      vertical-align: middle; }
+    #work .reel .slide .slide-text {
+      width: 50%;
+      margin-left: 75px;
+      background-image: url(/images/zigzag.png);
+      background-repeat: no-repeat;
+      background-position: left 62px; }
+      #work .reel .slide .slide-text h5 {
+        max-width: 400px;
+        color: #b7b7b7;
+        font-weight: 300;
+        margin-top: 64px;
+        line-height: 1.666666666; }
+      #work .reel .slide .slide-text button {
+        margin-top: 40px; }
 
 #about {
   padding: 100px 0; }
@@ -323,6 +335,12 @@ button {
       #footer .footer-right p:nth-of-type(1) {
         margin: 75px 0 5px 0; }
 
+@media screen and (max-width: 1300px) {
+  #work .reel .left-arrow, #work .reel .right-arrow {
+    margin: 0; } }
+@media screen and (max-width: 1167px) {
+  #work .reel .left-arrow, #work .reel .right-arrow {
+    padding: 15px 15px; } }
 @media screen and (max-width: 1104px) {
   #header .header li {
     margin: 0px 10px; }
@@ -338,7 +356,7 @@ button {
   #process li {
     padding-right: 54px; }
 
-  #work .work img, #work .work .work-text {
+  #work .reel .slide img, #work .reel .slide .slide-text {
     width: 45%; }
 
   #about .why h2 {
@@ -387,8 +405,18 @@ button {
     padding-right: 20px;
     vertical-align: top; }
 
-  #work .work .work-text {
-    margin-left: 60px; }
+  #work
+  .reel .slide img, #work
+  .reel .slide .slide-text {
+    display: block;
+    margin: auto; }
+  #work
+  .reel .slide .slide-text {
+    text-align: center;
+    background-position: center 62px; }
+    #work
+    .reel .slide .slide-text h3 {
+      padding-top: 10px; }
 
   #about .why h2 {
     margin-right: 33px; }
@@ -485,18 +513,6 @@ button {
       padding-right: 70px; }
     #process li.decoration, #process li.calendar, #process li.heart {
       padding-right: 0; }
-
-  #work .work {
-    text-align: center; }
-    #work .work img, #work .work .work-text {
-      width: 83%; }
-    #work .work .work-text {
-      margin: 0;
-      background-position: center 62px; }
-      #work .work .work-text h3 {
-        padding-top: 10px; }
-      #work .work .work-text h5 {
-        margin: 64px auto 0 auto; }
 
   #about .why {
     text-align: center;

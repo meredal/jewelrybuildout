@@ -84,11 +84,6 @@ button {
   cursor: pointer;
 }
 
-// backgrounds:
-// header - img
-// work faf9f9
-// customer-feedback faf9f9
-// footer 141414
 
 #header {
   background-image: url(/images/header-background.jpg);
@@ -136,7 +131,7 @@ button {
   width: 100%;
 }
 
-.header, #history, #process, .work, #about, .customer-feedback, #news, .footer-content {
+.header, #history, #process, .slide, #about, .customer-feedback, #news, .footer-content {
   max-width: 980px;
   width: 90%;
   margin: 0 auto;
@@ -238,26 +233,42 @@ button {
 #work {
   background-color: #faf9f9;
   padding: 110px 0;
-  .work {
-    img, .work-text {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .work-text {
-      width: 50%;
-      margin-left: 75px;
-      background-image: url(/images/zigzag.png);
-      background-repeat: no-repeat;
-      background-position: left 62px;
-      h5 {
-        max-width: 400px;
-        color: #b7b7b7;
-        font-weight: 300;
-        margin-top: 64px;
-        line-height: 1.666666666;
+  .reel {
+    position: relative;
+    .left-arrow, .right-arrow {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      margin: 0 50px;
+      padding: 19px 29px;
+      &:hover {
+        background-color: white;
       }
-      button {
-        margin-top: 40px;
+    }
+    .right-arrow {
+      right: 0;
+    }
+    .slide {
+      img, .slide-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .slide-text {
+        width: 50%;
+        margin-left: 75px;
+        background-image: url(/images/zigzag.png);
+        background-repeat: no-repeat;
+        background-position: left 62px;
+        h5 {
+          max-width: 400px;
+          color: #b7b7b7;
+          font-weight: 300;
+          margin-top: 64px;
+          line-height: 1.666666666;
+        }
+        button {
+          margin-top: 40px;
+        }
       }
     }
   }
@@ -439,7 +450,23 @@ button {
   }
 }
 
-// breaks at 1104, 980, 768, 480 px
+// breaks at 1300, 1167, 1104, 980, 768, 480px
+
+@media screen and (max-width: 1300px) {
+  #work .reel {
+    .left-arrow, .right-arrow {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1167px) {
+  #work .reel {
+    .left-arrow, .right-arrow {
+      padding: 15px 15px;
+    }
+  }
+}
 
 @media screen and (max-width: 1104px) {
   #header .header li {
@@ -460,8 +487,10 @@ button {
     }
   }
   #work {
-    .work img, .work .work-text {
-      width: 45%;
+    .reel {
+      .slide img, .slide .slide-text {
+        width: 45%;
+      }
     }
   }
   #about {
@@ -537,8 +566,21 @@ button {
       vertical-align: top;
     }
   }
-  #work .work .work-text {
-    margin-left: 60px;
+  #work
+  .reel {
+    .slide {
+      img, .slide-text {
+        display: block;
+        margin: auto;
+      }
+      .slide-text {
+        text-align: center;
+        background-position: center 62px;
+        h3 {
+          padding-top: 10px;
+        }
+      }
+    }
   }
   #about {
     .why {
@@ -677,24 +719,6 @@ button {
       }
       &.decoration, &.calendar, &.heart {
         padding-right: 0;
-      }
-    }
-  }
-  #work {
-    .work {
-      text-align: center;
-      img, .work-text {
-        width: 83%;
-      }
-      .work-text {
-        margin: 0;
-        background-position: center 62px;
-        h3 {
-          padding-top: 10px;
-        }
-        h5 {
-          margin: 64px auto 0 auto;
-        }
       }
     }
   }
