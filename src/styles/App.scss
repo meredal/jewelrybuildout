@@ -235,12 +235,6 @@ button {
   padding: 110px 0;
   position: relative;
   min-height: 350px;
-  .reel {
-    position: absolute;
-    left: 0;
-    // TODO make this dynamic in React
-    width: 10000px;
-  }
 }
 
 #about {
