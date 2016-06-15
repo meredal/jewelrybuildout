@@ -3,23 +3,43 @@ require('styles/App.scss');
 
 import React from 'react';
 import ArrowComponent from './slideshow/ArrowComponent.js';
+import SlideComponent from './slideshow/SlideComponent.js';
 
-let yeomanImage = require('../images/yeoman.png');
+const slideData = [
+  {
+    key: 'slide1',
+    imagePath: 'images/ring.jpg',
+    imageAlt: 'Diamond Ring',
+    title: 'Mercury'
+  },
+  {
+    key: 'slide2',
+    imagePath: 'http://placeimg.com/400/400/nature/grayscale',
+    imageAlt: 'Dummy Image 1',
+    title: 'Venus'
+  },
+  {
+    key: 'slide3',
+    imagePath: 'http://placeimg.com/400/400/nature/grayscale',
+    imageAlt: 'Dummy Image 2',
+    title: 'Jupiter'
+  }
+]
 
 class AppComponent extends React.Component {
+  renderSlides() {
+    return slideData.map(
+      (slideProps) => (<SlideComponent {...slideProps} />)
+    );
+  }
+
   render() {
     return (
       <div id="work" className="slideshow">
+        <ArrowComponent direction="left" />
+        <ArrowComponent direction="right" />
         <div className="reel">
-          <ArrowComponent />
-          <div className="slide">
-            <img src="images/ring.jpg" alt="Diamond Ring" />
-            <div className="slide-text">
-              <h3>Mercury</h3>
-              <h5>Movie buff Tony Chou (Tony Zhou) published in his Vimeo video review with an analysis of the demonstration set of SMS and other text messages in modern cinema.</h5>
-              <button type="button" name="button" className="learn-more-btn">Learn more.</button>
-            </div>
-          </div>
+          {this.renderSlides()}
         </div>
       </div>
     );

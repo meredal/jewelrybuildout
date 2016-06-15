@@ -6,8 +6,11 @@ require('styles/slideshow/Arrow.scss');
 
 let ArrowComponent = (props) => (
   <div className="arrow-component">
-    <img src="images/left-arrow.png" alt="Left Arrow" className="left-arrow" />
-    <img src="images/right-arrow.png" alt="Right Arrow" className="right-arrow" />
+    <img
+      src={`images/${props.direction}-arrow.png`}
+      alt={`${props.direction} arrow`}
+      className={`${props.direction}-arrow`}
+    />
   </div>
 );
 
@@ -15,6 +18,8 @@ ArrowComponent.displayName = 'SlideshowArrowComponent';
 
 // Uncomment properties you need
 // ArrowComponent.propTypes = {};
-// ArrowComponent.defaultProps = {};
+ArrowComponent.defaultProps = {
+  direction: React.PropTypes.string.isRequired
+};
 
 export default ArrowComponent;

@@ -131,7 +131,7 @@ button {
   width: 100%;
 }
 
-.header, #history, #process, #about, .customer-feedback, #news, .footer-content {
+.header, #history, #process, .slide, #about, .customer-feedback, #news, .footer-content {
   max-width: 980px;
   width: 90%;
   margin: 0 auto;
@@ -233,13 +233,44 @@ button {
 #work {
   background-color: #faf9f9;
   padding: 110px 0;
-  position: relative;
-  min-height: 350px;
   .reel {
-    position: absolute;
-    left: 0;
-    // TODO make this dynamic in React
-    width: 10000px;
+    position: relative;
+    .left-arrow, .right-arrow {
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      margin: 0 50px;
+      padding: 19px 29px;
+      &:hover {
+        background-color: white;
+      }
+    }
+    .right-arrow {
+      right: 0;
+    }
+    .slide {
+      img, .slide-text {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .slide-text {
+        width: 50%;
+        margin-left: 75px;
+        background-image: url(/images/zigzag.png);
+        background-repeat: no-repeat;
+        background-position: left 62px;
+        h5 {
+          max-width: 400px;
+          color: #b7b7b7;
+          font-weight: 300;
+          margin-top: 64px;
+          line-height: 1.666666666;
+        }
+        button {
+          margin-top: 40px;
+        }
+      }
+    }
   }
 }
 
