@@ -43,6 +43,8 @@ ReelComponent.displayName = 'SlideshowReelComponent';
 
 // Uncomment properties you need
 // ReelComponent.propTypes = {};
-// ReelComponent.defaultProps = {};
+ReelComponent.defaultProps = {
+  activeSlide: React.PropTypes.number.isRequired
+};
 
 export default ReelComponent;

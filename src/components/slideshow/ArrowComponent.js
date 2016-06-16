@@ -5,7 +5,7 @@ import React from 'react';
 require('styles/slideshow/Arrow.scss');
 
 let ArrowComponent = (props) => (
-  <div className="arrow-component">
+  <div className="arrow-component" onClick={props.onClick}>
     <img
       src={`images/${props.direction}-arrow.png`}
       alt={`${props.direction} arrow`}
