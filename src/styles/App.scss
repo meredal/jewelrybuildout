@@ -86,7 +86,7 @@ button {
 
 
 #header {
-  background-image: url(/images/header-background.jpg);
+  background-image: url(../images/header-background.jpg);
   width: 100%;
   padding-bottom: 216px;
   .header {
@@ -170,7 +170,7 @@ button {
   padding: 100px 0;
   .process-heading {
     text-align: center;
-    background-image: url(/images/zigzag.png);
+    background-image: url(../images/zigzag.png);
     background-repeat: no-repeat;
     background-position: center;
     h3 {
@@ -193,22 +193,22 @@ button {
     padding-right: 69px;
     padding-bottom: 74px;
     &.store {
-      background-image: url(/images/store-icon.png);
+      background-image: url(../images/store-icon.png);
     }
     &.decoration {
-      background-image: url(/images/decoration-icon.png);
+      background-image: url(../images/decoration-icon.png);
     }
     &.payment {
-      background-image: url(/images/payment-icon.png);
+      background-image: url(../images/payment-icon.png);
     }
     &.calendar {
-      background-image: url(/images/calendar-icon.png);
+      background-image: url(../images/calendar-icon.png);
     }
     &.thumbs-up {
-      background-image: url(/images/thumbs-up-icon.png);
+      background-image: url(../images/thumbs-up-icon.png);
     }
     &.heart {
-      background-image: url(/images/heart-icon.png);
+      background-image: url(../images/heart-icon.png);
     }
     &.store, &.decoration, &.payment, &.thumbs-up, &.calendar, &.heart {
       background-repeat: no-repeat;
@@ -282,7 +282,7 @@ button {
   .our-jewelry {
     position: relative;
     padding-bottom: 54px;
-    background-image: url(/images/zigzag.png);
+    background-image: url(../images/zigzag.png);
     background-repeat: no-repeat;
     background-position: 512px 460px;
     img {
@@ -303,7 +303,7 @@ button {
   padding: 73px 0 104px 0;
   .customer-feedback {
     .feedback-heading {
-      background-image: url(/images/zigzag.png);
+      background-image: url(../images/zigzag.png);
       background-repeat: no-repeat;
       background-position: center;
       text-align: center;
@@ -326,7 +326,7 @@ button {
       max-width: 285px;
       padding-right: 20px;
       vertical-align: top;
-      background-image: url(/images/quote-icon.png);
+      background-image: url(../images/quote-icon.png);
       background-repeat: no-repeat;
       background-position: top left;
       &.paul, &.oleg &.julia {
@@ -356,7 +356,7 @@ button {
   .photoblog {
     position: relative;
     padding-bottom: 54px;
-    background-image: url(/images/zigzag.png);
+    background-image: url(../images/zigzag.png);
     background-repeat: no-repeat;
     background-position: 0 460px;
     img {
