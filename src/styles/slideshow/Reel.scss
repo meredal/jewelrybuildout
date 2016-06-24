@@ -1,5 +1,8 @@
 .reel-component {
   position: absolute;
   left: 0;
-  width: 4500px;
+  width: 10000px;  // dynamically changed by ReelComponent, big width so it doesn't flash on load
+
+  -webkit-transition: left 1.4s; /* Safari */
+  transition: left 1.4s;
 }
